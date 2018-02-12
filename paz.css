@@ -5,3 +5,49 @@
     direction: rtl;
     box-sizing: border-box;
 }
+body {
+    width: 900px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-right: 1px solid black;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    right: 0;
+    width: 100%;
+}
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.column1, .column2 {
+float: left;
+}
+
+.row ::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+div.column1 {
+    border: 1px solid black;
+    border-bottom-right-radius: 20px;
+    padding: 5px;
+    width: 290px;
+    height:400px;
+}
+#pic1 {
+    background-image: url("פזקר_-291_354410564000.jpg");
+    background-repeat: no-repeat;
+}
