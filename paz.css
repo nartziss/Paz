@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    width: 900px;
+    width: 885px;
     margin: auto;
     border: 1px solid black;
 }
@@ -43,9 +43,8 @@ footer {
 div.column1 {
     border: 1px solid black;
     border-bottom-right-radius: 20px;
-    padding: 5px;
-    width: 290px;
-    height:400px;
+    width: 293px;
+    height:355px;
 }
 #pic1 {
     background-image: url("פזקר_-291_354410564000.jpg");
