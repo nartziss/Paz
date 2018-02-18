@@ -1,52 +1,310 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    direction: rtl;
     box-sizing: border-box;
 }
+
 body {
-    width: 885px;
-    margin: auto;
-    border: 1px solid black;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
 }
+
+header {
+    position: relative;
+    background: linear-gradient(rgb(144,144,144) 85%, rgb(170,170,170));
+    height: 105px;
+}
+
+header > nav {
+    position: absolute;
+    width: 900px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+header > nav > ul {
+    position: absolute;
+    right: 200px;
+    list-style: none;
+    padding: 0;
+}
+
+header > nav > ul > li {
+    display: inline;
+    border-right: 1px solid rgb(166, 166, 166);
+}
+
+header > nav > ul > li:first-child {
+    border-right: none;
+}
+
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 11px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+nav > ul > li > a:hover {
+    text-decoration: underline;
+    color: rgb(0, 92, 160);
+} 
+header > nav > form {
+    position: absolute;
+    left: 10px;
+    top: -35px;
+}
+
+header > nav > form > span {
+    color: white;
+    font-size: 13px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+header > nav > form > a > img {
+    position: relative;
+    top: 6px;
+    left: 5px;
+}    
+
+header > nav > form > input {
+    width: 132px;
+    height: 21px;
+    border-top-right-radius: 5px;
+}
+   
 
 .dropdown {
     position: relative;
-    display: inline-block;
-    border-right: 1px solid black;
 }
 
 .dropdown-content {
-    position: absolute;
     display: none;
-    right: 0;
-    width: 100%;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 15px;
+    background-color: rgb(144,144,144);
+    z-index: 99; 
+    text-align: right;
 }
-.dropdown:hover > .dropdown-content {
+
+.dropdown:hover .dropdown-content {
     display: block;
+}    
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;  
+    padding: 3px 5px;
+    border-top: 1px solid rgb(166, 166, 166);
 }
 
-.column1, .column2 {
-float: left;
+.dropdown-content a:hover {
+    text-decoration: underline;
+    color: rgb(0, 92, 160);
+    background: none;
+    background-color: rgb(190, 190, 190);
+}   
+
+.logo {
+    position: absolute;
+    right: 0;
+    top: -20px;
 }
 
-.row ::after {
+.home-menu {
+    position: absolute;
+    right: -50px;
+    top: 2px;
+}
+
+main {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+
+.row::after {
     content: "";
     display: table;
     clear: both;
 }
+
+.big-tab {
+    float: right;
+    width: 33.3%;
+    
+}
+
+.big-tab-content {
+    position: relative;
+    height: 355px;
+    margin: 0 5px;
+    border-bottom-right-radius: 20px;
+}
+
+.big-tab-content > img {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+}
+
+.big-tab-textarea {
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    width: 248px;
+    height: 97px;
+    padding: 10px;
+    background-color: rgba(140, 140, 140, 0.9);
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+
+.big-tab-textarea > h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.big-tab-textarea > p {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1em;
+}
+
+.big-tab-textarea > a {
+    float: left;
+    color: white;
+    font-size: 13px;
+} 
+
+.small-tabs {
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+
+.small-tab {
+    float: right;
+    width: 33.3%;
+    
+}
+
+.small-tab-content {
+    position: relative;
+    height: 216px;
+    margin: 0 3.9px;
+    background-image: url("images/small_cube_bg.png");
+}
+
+.small-tab-textarea {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.small-tab-content > h3 {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 0;
+    padding-right: 25px;   
+    color: rgb(87, 87, 87);  
+}
+
+.small-tab-content > img {
+    padding: 15px 0;
+    padding-right: 25px;
+}
+
+.small-tab-content > a {
+    float: left;
+    font-size: 13px;
+    color: #72716d;
+    position: relative;
+    left: 20px;
+}
+.small-tab-content :hover {
+    text-decoration: underline;
+    color: rgb(0, 92, 160);
+}
+
+.small-tab-content > ul {
+    list-style: none;
+    padding-right: 25px;
+}
+
+.small-tab-content > ul > li > a {
+    color: #72716d;
+    font-size: 13px;
+}
+.small-tab-content > ul > li {
+    text-decoration: underline;
+    color: rgb(0, 92, 160); 
+}
+.small-tab-content > .israel-map {
+    position: absolute;
+    top: 25px;
+    right: 170px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
+    height: 38px;
+    width: 100%;
+    background: linear-gradient(rgb(170,170,170) 15%, rgb(144,144,144));    
 }
-div.column1 {
-    border: 1px solid black;
-    border-bottom-right-radius: 20px;
-    width: 293px;
-    height:355px;
+
+footer > nav {
+    width: 900px;
+    margin: 0 auto;
 }
-#pic1 {
-    background-image: url("פזקר_-291_354410564000.jpg");
-    background-repeat: no-repeat;
+
+footer > nav > ul {
+    position: relative;
+    top: -8px;    
+    list-style: none;
+    padding: 0;
 }
+
+footer > nav > ul > li {
+    display: inline;
+    border-right: 1px solid white;
+}
+
+footer > nav > ul > li:first-child {
+    border-right: none;
+}
+
+
+footer > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+footer > nav > ul > li:last-child > a {
+    color: red;
+}
+
+footer .fb-icon {
+    position: relative;
+    top: 3px;
+}
+
